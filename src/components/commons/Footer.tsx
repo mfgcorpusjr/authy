@@ -8,7 +8,7 @@ export default function Footer() {
   const pathname = usePathname();
 
   return (
-    <footer className="border-t">
+    <footer className="border-t bg-white">
       <Container className="py-4 text-sm text-muted-foreground">
         <p>Current Path: {pathname}</p>
 
