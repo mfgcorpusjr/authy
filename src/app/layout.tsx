@@ -25,9 +25,9 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <Navbar />
 
-        <main className="flex-1 flex flex-col bg-primary/5">
-          <Container className="py-16">{children}</Container>
-        </main>
+        <Container className="flex-1 flex flex-col py-16 bg-primary/5">
+          {children}
+        </Container>
 
         <Footer />
       </body>
