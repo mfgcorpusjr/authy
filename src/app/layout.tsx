@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { SessionProvider } from "next-auth/react";
+
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/commons/Navbar";
 import Container from "@/components/commons/Container";
@@ -24,13 +26,17 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.className} antialiased`}>
       <body className="min-h-screen flex flex-col bg-primary/5">
-        <Navbar />
+        <SessionProvider>
+          <Navbar />
 
-        <Container className="flex-1 flex flex-col py-16">{children}</Container>
+          <Container className="flex-1 flex flex-col py-16">
+            {children}
+          </Container>
 
-        <Footer />
+          <Footer />
 
-        <Toaster />
+          <Toaster />
+        </SessionProvider>
       </body>
     </html>
   );
