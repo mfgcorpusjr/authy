@@ -2,37 +2,41 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Session } from "next-auth";
 
-import SignOutLink from "@/features/auth/components/SignOutLink";
+import { Button } from "@/components/ui/button";
 
 import { NAV_LINKS } from "@/utils/constants";
-import { cn } from "@/lib/utils";
 
-export default function NavLinks() {
+type Props = {
+  session: Session | null;
+};
+
+export default function NavLinks({ session }: Props) {
   const pathname = usePathname();
 
-  return (
-    <>
-      {NAV_LINKS.map((navLink) => {
-        const isActive = navLink.href === pathname;
+  return NAV_LINKS.map((navLink) => {
+    if ((navLink.protected && session) || (!navLink.protected && !session)) {
+      const isActive = navLink.href === pathname;
 
-        return (
+      return (
+        <Button
+          key={navLink.href}
+          asChild
+          size="sm"
+          variant={isActive ? "secondary" : "ghost"}
+        >
           <Link
             key={navLink.href}
             href={navLink.href}
-            className={cn(
-              "text-sm font-medium hover:underline underline-offset-4",
-              {
-                underline: isActive,
-              },
-            )}
+            className="text-sm font-medium"
           >
             {navLink.label}
           </Link>
-        );
-      })}
-
-      <SignOutLink />
-    </>
-  );
+        </Button>
+      );
+    } else {
+      return null;
+    }
+  });
 }

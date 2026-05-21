@@ -1,14 +1,18 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+
 import signOutAction from "@/features/auth/actions/signOutAction";
 
 export default function SignOutLink() {
   return (
-    <span
+    <Button
+      size="sm"
+      variant="ghost"
       onClick={signOutAction}
-      className="text-sm font-medium hover:underline underline-offset-4 cursor-pointer"
+      className="text-sm font-medium cursor-pointer"
     >
       Sign Out
-    </span>
+    </Button>
   );
 }

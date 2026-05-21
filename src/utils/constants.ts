@@ -1,5 +1,6 @@
 export const NAV_LINKS = [
-  { href: "/dashboard", label: "Dashboard" },
-  { href: "/dashboard/profile", label: "Profile" },
-  { href: "/dashboard/settings", label: "Settings" },
+  { href: "/sign-in", label: "Sign In", protected: false },
+  { href: "/dashboard", label: "Dashboard", protected: true },
+  { href: "/dashboard/profile", label: "Profile", protected: true },
+  { href: "/dashboard/settings", label: "Settings", protected: true },
 ];
