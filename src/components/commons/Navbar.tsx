@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LucideLock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import Container from "@/components/commons/Container";
@@ -10,6 +11,8 @@ export default function Navbar() {
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <Button asChild variant="ghost">
             <Link href="/">
+              <LucideLock />
+
               <h1 className="text-xl font-bold">Authy</h1>
             </Link>
           </Button>
@@ -25,7 +28,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <div className="size-2 rounded-full bg-red-700 animate-ping" />
 
-          <div className="text-sm">Not authenticated</div>
+          <div className="text-sm text-muted-foreground">Not authenticated</div>
         </div>
       </Container>
     </nav>

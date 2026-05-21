@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Navbar from "@/components/commons/Navbar";
 import Container from "@/components/commons/Container";
+import Footer from "@/components/commons/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,9 +25,11 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <Navbar />
 
-        <main className="flex-1 flex flex-col bg-gray-50">
+        <main className="flex-1 flex flex-col bg-primary/5">
           <Container className="py-16">{children}</Container>
         </main>
+
+        <Footer />
       </body>
     </html>
   );
