@@ -5,21 +5,21 @@ import { usePathname } from "next/navigation";
 
 import SignOutLink from "@/features/auth/components/SignOutLink";
 
-import { AUTH_LINKS } from "@/features/auth/utils/constants";
+import { NAV_LINKS } from "@/utils/constants";
 import { cn } from "@/lib/utils";
 
-export default function AuthLinks() {
+export default function NavLinks() {
   const pathname = usePathname();
 
   return (
     <>
-      {AUTH_LINKS.map((authLink) => {
-        const isActive = authLink.href === pathname;
+      {NAV_LINKS.map((navLink) => {
+        const isActive = navLink.href === pathname;
 
         return (
           <Link
-            key={authLink.href}
-            href={authLink.href}
+            key={navLink.href}
+            href={navLink.href}
             className={cn(
               "text-sm font-medium hover:underline underline-offset-4",
               {
@@ -27,7 +27,7 @@ export default function AuthLinks() {
               },
             )}
           >
-            {authLink.label}
+            {navLink.label}
           </Link>
         );
       })}

@@ -3,7 +3,7 @@ import { LucideLock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import Container from "@/components/commons/Container";
-import AuthLinks from "@/features/auth/components/AuthLinks";
+import NavLinks from "@/components/commons/NavLinks";
 import AuthIndicator from "@/features/auth/components/AuthIndicator";
 
 import { auth } from "@/auth";
@@ -24,7 +24,7 @@ export default async function Navbar() {
           </Button>
 
           {session ? (
-            <AuthLinks />
+            <NavLinks />
           ) : (
             <Link
               href="/sign-in"
