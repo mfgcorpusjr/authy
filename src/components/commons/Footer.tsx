@@ -11,7 +11,7 @@ export default async function Footer() {
       <Container className="py-4 text-sm text-muted-foreground">
         <CurrentPath />
 
-        <p>Auth Status: {session ? "Logged in" : "Logged out"}</p>
+        <p>Auth Status: {session ? "Signed In" : "Signed Out"}</p>
       </Container>
     </footer>
   );

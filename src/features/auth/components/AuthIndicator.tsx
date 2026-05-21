@@ -17,7 +17,7 @@ export default function AuthIndicator({ session }: Props) {
       />
 
       <div className="text-sm text-muted-foreground">
-        {session ? "Authenticated" : "Not authenticated"}
+        {session ? "Authenticated" : "Not Authenticated"}
       </div>
     </div>
   );

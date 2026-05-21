@@ -15,7 +15,7 @@ export default async function Navbar() {
     <nav className="border-b bg-white">
       <Container className="flex flex-col sm:flex-row justify-between items-center gap-4 py-4">
         <div className="flex flex-col sm:flex-row items-center gap-4">
-          <Button asChild variant="ghost">
+          <Button asChild variant="secondary">
             <Link href="/">
               <LucideLock />
 

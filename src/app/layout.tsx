@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.className} antialiased`}>
-      <body className="min-h-screen flex flex-col bg-primary/5">
+      <body className="min-h-screen flex flex-col bg-gray-50">
         <Navbar />
 
         <Container className="flex-1 flex flex-col py-16">{children}</Container>
