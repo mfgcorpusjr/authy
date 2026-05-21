@@ -1,18 +1,15 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import { useSession } from "next-auth/react";
+import { auth } from "@/auth";
 
 import Container from "@/components/commons/Container";
+import CurrentPath from "@/components/commons/CurrentPath";
 
-export default function Footer() {
-  const pathname = usePathname();
-  const { data: session } = useSession();
+export default async function Footer() {
+  const session = await auth();
 
   return (
     <footer className="border-t bg-white">
       <Container className="py-4 text-sm text-muted-foreground">
-        <p>Current Path: {pathname}</p>
+        <CurrentPath />
 
         <p>Auth Status: {session ? "Logged in" : "Logged out"}</p>
       </Container>
