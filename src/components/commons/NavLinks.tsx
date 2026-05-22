@@ -7,6 +7,7 @@ import { Session } from "next-auth";
 import { Button } from "@/components/ui/button";
 
 import { NAV_LINKS } from "@/utils/constants";
+import { cn } from "@/lib/utils";
 
 type Props = {
   session: Session | null;
@@ -20,20 +21,18 @@ export default function NavLinks({ session }: Props) {
       const isActive = navLink.href === pathname;
 
       return (
-        <Button
+        <Link
           key={navLink.href}
-          asChild
-          size="sm"
-          variant={isActive ? "secondary" : "ghost"}
+          href={navLink.href}
+          className={cn(
+            "text-sm font-medium hover:underline hover:underline-offset-4",
+            {
+              "underline underline-offset-4": isActive,
+            },
+          )}
         >
-          <Link
-            key={navLink.href}
-            href={navLink.href}
-            className="text-sm font-medium"
-          >
-            {navLink.label}
-          </Link>
-        </Button>
+          {navLink.label}
+        </Link>
       );
     } else {
       return null;
