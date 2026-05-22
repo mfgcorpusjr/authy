@@ -4,8 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Session } from "next-auth";
 
-import { Button } from "@/components/ui/button";
-
 import { NAV_LINKS } from "@/utils/constants";
 import { cn } from "@/lib/utils";
 
