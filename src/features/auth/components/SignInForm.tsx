@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Spinner } from "@/components/ui/spinner";
-import FormInput from "@/components/forms/FormInput";
+import FormInput from "@/components/form/FormInput";
 
 import useSignIn from "@/features/auth/hooks/useSignIn";
 

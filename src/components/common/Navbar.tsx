@@ -2,8 +2,8 @@ import Link from "next/link";
 import { LucideLock } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import Container from "@/components/commons/Container";
-import NavLinks from "@/components/commons/NavLinks";
+import Container from "@/components/common/Container";
+import NavLinks from "@/components/common/NavLinks";
 import SignOutLink from "@/features/auth/components/SignOutLink";
 import AuthIndicator from "@/features/auth/components/AuthIndicator";
 

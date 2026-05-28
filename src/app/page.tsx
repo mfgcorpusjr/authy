@@ -1,4 +1,4 @@
-import Heading from "@/components/commons/Heading";
+import Heading from "@/components/common/Heading";
 
 export default function HomePage() {
   return (

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 
-import Heading from "@/components/commons/Heading";
+import Heading from "@/components/common/Heading";
 
 export const metadata: Metadata = {
   title: "Settings",

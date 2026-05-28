@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 
-import Container from "@/components/commons/Container";
-import CurrentPath from "@/components/commons/CurrentPath";
+import Container from "@/components/common/Container";
+import CurrentPath from "@/components/common/CurrentPath";
 
 export default async function Footer() {
   const session = await auth();
